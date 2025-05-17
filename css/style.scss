@@ -3,6 +3,7 @@
 body {
   overflow-x: hidden;
   direction: rtl;
+  position: relative;
 }
 
 header {
@@ -117,7 +118,7 @@ header {
 
       gap: 16px;
 
-      .toggle{
+      .toggle {
         display: none;
 
         @media screen and (max-width: 768px) {
@@ -579,5 +580,23 @@ footer {
         }
       }
     }
+  }
+}
+
+.contact_btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background: $dark;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  @include center-flex();
+  transition: $transition;
+  box-shadow: $shadow;
+
+  &:hover {
+    background: $main;
   }
 }
